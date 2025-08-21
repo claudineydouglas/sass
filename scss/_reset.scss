@@ -16,6 +16,7 @@ p {
 header,
 section,
 footer {
+    background-color: #081F5C;
     display: block;
     margin: 0 auto;
     width: 100%;
@@ -43,7 +44,7 @@ body {
 }
 
 p {
-    color: $color-01;
+    color: $color-default;
     font-size: $font-normal;
     margin-bottom: $mb;
     text-align: $align;
@@ -66,7 +67,24 @@ h3 {
     font-size: $font-normal;
 }
 
+h4 {
+    color: $color-default;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+h5 {
+    padding: 20px;
+    color: $color-default;
+    font-size: 2rem;
+}
+
+.copy {
+    margin: 10 auto;
+}
+
 header,
 footer {
-    background-color: $bg-color
+    background-color: #081F5C;
 }

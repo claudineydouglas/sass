@@ -1,0 +1,13 @@
+.motos {
+    h2 {
+        padding: 20px;
+        color: $color-01;
+    }
+    li {
+        color: $color-default;
+
+        a {
+            background-color: $color-01;
+        }
+    }
+}
