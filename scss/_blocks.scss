@@ -1,35 +1,66 @@
 .blocks {
 
+    /*
+    Exemplo
+    .cars__title
+    .cars__list
+    .cars__item
+    .cars__item--destack
+    .cars__button
+    .cars__img-container
+
+    */
+
     padding: 3rem 0;
 
-    h2 {
+    &__title {
         color: $color-01;
     }
 
-    ul {
+    &__list {
         list-style-type: none;
         font-size: $font-small;
-        display: flex;
+        display: block;
+        float: left;
         justify-content: space-between;
-        height: 250px;
+        height: auto;
+        margin: $space-default auto;
         padding: 1rem 0;
         width: 100%;
     }
 
-    li {
+    &__item {
         color: $color-02;
         display: block;
         margin: $space-default auto;
-        width: 30%;
+        text-align: center;
+        width: calc(100% / 3 - 15px);
+
+        @media (max-width: $tablet) {
+            width: calc(99% - 30px);
+        }
         
-        .img-container {
+        &__img-container {
             display: block;
-            height: 200px;
+            height: 15rem;
             overflow: hidden;
             width: 100%;
+            @media (max-width: $tablet) {
+                height: 20rem;
+            }
         }
 
-        a {
+        &__description {
+            color: $color-default;
+            font-size: $font-normal;
+
+            &--destack {
+                color: $color-02;
+                padding: $space-default;
+            }
+        }
+
+        &__button {
             background-color: $color-01;
             border-radius: 5px;
             color: white;

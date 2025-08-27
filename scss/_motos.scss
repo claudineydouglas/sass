@@ -1,12 +1,25 @@
+@mixin theme($theme: $color-02) {
+    border: 1px, solid, $theme;
+    background-color: $color-default;
+}
+
 .motos {
-    h2 {
+    &__title {
         padding: 20px;
         color: $color-01;
     }
-    li {
+    @include theme;
+
+    &__item {
+        @include theme($theme: $color-03);
         color: $color-default;
 
-        a {
+        &--destack {
+            @include theme;
+        }
+        
+
+        &__button {
             background-color: $color-01;
         }
     }
