@@ -1,4 +1,3 @@
-@use 'sass:math';
 * {
     border: 0;
     margin: 0;
@@ -10,15 +9,13 @@ html {
 }
 
 div, 
-&__description {
+p {
     display: block;
 }
 
-article,
 header,
 section,
 footer {
-    background-color: #081F5C;
     display: block;
     margin: 0 auto;
     width: 100%;
@@ -31,17 +28,10 @@ section {
 
 .container {
     margin: 0 auto;
-    max-width: math.div(1200, 1200) * 100%;
-
-    @media (max-width:1199px) {
-       .container {
-        max-width: math.div(300, 1200%) * 100%;
-       } 
-    }
+    max-width: 1200px;
 }
 
-
-&__image {
+img {
     width: 100%;
     height: auto;
 }
@@ -52,21 +42,21 @@ body {
     color: $color-default;
 }
 
-&__description {
-    color: $color-default;
+p {
+    color: $color-01;
     font-size: $font-normal;
     margin-bottom: $mb;
     text-align: $align;
 }
 
-&__title {
+h1 {
     color: $color-01;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: $font-big;
     margin-top: $mt-02;
 }
 
-&__subtitle {
+h2 {
     color: $color-02;
     font-size: $font-medium;
 }
@@ -76,24 +66,7 @@ h3 {
     font-size: $font-normal;
 }
 
-h4 {
-    color: $color-default;
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 20px;
-}
-
-h5 {
-    padding: 20px;
-    color: $color-default;
-    font-size: 2rem;
-}
-
-.copy {
-    margin: 10 auto;
-}
-
 header,
 footer {
-    background-color: #081F5C;
+    background-color: $bg-color
 }
